@@ -5,13 +5,14 @@
 }
 
 :root{
-    --color-primary: #ffc500;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    --color-primary: #ffc500;
+    --default-padding: 1rem;
 }
 
 body{
-    margin: auto;
+    margin: 0;
     padding: 0;
     padding-top: 7.75rem;
 }
@@ -38,6 +39,7 @@ li{
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 1;
 }
 
 .navbar-links{
@@ -75,4 +77,72 @@ li{
     font-size: 0.875rem;
     font-weight: 300;
     text-align: right;
+}
+
+#slider{
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    /* padding: var(--default-padding); */
+}
+
+.slide{
+    height: calc(100vh - 7.75rem);
+    position: relative;
+}
+
+.slide-bg-img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.slide-copy{
+    left: 50vw;
+    position: absolute;
+    top: 5rem;
+}
+
+.slide-copy h6{
+    font-size: 0.8000rem;
+    font-weight: 400;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+}
+
+.slide-copy h2{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.slide-copy h2 span{
+    display: block;
+}
+
+.btn{
+    background: unset;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: .7375rem;
+    font-weight: 700;
+    min-height: 3.125rem;
+    padding: 1rem  2.5rem;
+    text-transform: uppercase;
+
+    border: .125rem solid #FFF;
+    color: var(--color-primary);
+
+    transition: all ease .5s;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus{
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #FFF;
 }
